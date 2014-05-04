@@ -6,8 +6,20 @@ $pesticide-debug: false;
 @import "compass/css3/text-shadow";
 
 $leftColumnWith:5%;
+
 $colorSienna:#B04839;
-$colorSuede:#AD907B;
+//$colorSuede:#AD907B;
+$colorBackground:#D2C5BA;
+
+
+$sizeSmartPhone:25em; 		 /*400px*/
+$sizeSmallScreen:43.5em; 	 /*696px*/
+$sizeNormalScreen:47em;		 /*752px*/
+$sizeBigScreen:51.25;			 /*820px*/
+
+// $fontHeader:Helvetica,sans-serif;
+$fontBody: 'estrangelo-edessa',Georgia,serif;
+
 
 /* apply a natural box layout model to all elements */
 *, *:before, *:after {
@@ -22,237 +34,104 @@ html{
 }
 
 body{
-  font-family: Helvetica,Arial,sans-serif;
+  font-family: $fontBody;
+  background-color: $colorBackground;
+	font-size: 1.5em;  
+	line-height: 150%;
+	
+  @media only screen AND (max-width: $sizeSmartPhone) {
+    font-size: 1.2em;
+  }	
 }
-
-mobileonly{
-	display: none;
-}
-
-header{
-/* 	padding-left: 0.1em; */
-
- 	height: 1.3em; //98px;  //1.175em;//5.63em; */
-	background-color: $colorSuede; 	
-	font-size: 5em;
-	font-weight: 700;
-/* 	text-align: center; */
-
-	a{
-		text-decoration: none;
-		color: white;
-/* 		padding-left: 0.1em; */
-		
-		$default-text-shadow-color: #4C4C4C ; //#aaaaaa;
-/* 		$default-text-shadow-h-offset: 0px; */
-/* 		$default-text-shadow-v-offset: 0px; */
-		$default-text-shadow-blur: 2px;
-/* 		$default-text-shadow-spread: false; */
-
-		@include single-text-shadow;
-		
- 	  margin-left: $leftColumnWith * 2;    
-
-		logo{
-		/* 		margin-left: 100% - (2 * $leftColumnWith); */
-/* 				float: left; */
-		/* 		margin-top: -1.1em;  */
-		    background: url(../img/LogopedieVos@2x.png);
-		    display: block;
-		    background-repeat: no-repeat;
-		    height: 262px;
-		    width: 161px;
-		    margin-left: 0.1em;
-		    margin-top: 0.3em; 
-		}
-	}
-}
-
 
 img{
 	border: none;
 	max-width: 100%;
 }
 
-article{
-	margin-left: $leftColumnWith;   
-	width: 100% - (2 * $leftColumnWith);
-	padding-top: 2em;
-	padding-left: 9em;
-	padding-right: 2em;
-	padding-bottom: 1em;
+li{
+	list-style: circle;
 }
 
-footer{
-	height: 18em;
-	background-color: $colorSienna;
-	color: white;
+a{
+	text-decoration: none;
 }
 
-footer a{
-	text-decoration: underline;	
-	color: white;
+iframe{
+	height: 400px;
+	@media only screen AND (max-width: $sizeSmartPhone) {
+		height: 8em;
+	}	
 }
 
-
-/* footer > div >  */
-section  {
-/* 	float: left; */
-	text-align: center;
-/* 	margin-top: 0.875em; */
-	background-color: #B04839;
-	padding-top: 0.9em;
-	
-	img{
-		width:434px;		
- 		margin-top: -9.5em; 
- 		float: left;
-	}
-}
-
-.leftcolumn{
-	width: 35%;
-/* 	float: left; */
-	display: block;
-}
-
-.rightcolumn{
-	width: 65%;
-	display: block;
-	float: right;
-}
-
-/* footer > section > section { */
-/*
-	float: left;
-	text-align: center;
-*/
-/* 	margin-top: 0.875em; */
-/*
-	background-color: #B04839;
-	width: 40%;
-	padding-bottom: 0.5em;
-*/
-/* } */
-
-
-/* 400px Smartphones (portrait)  */
-@media only screen and (max-width: 25em) {
-	body{
-		font-size: 1.1em;
-	}		
-	
-	mobileonly{
-			height: 1.7em;
-			display: block;
-			font-size: 1.0em;
-			font-weight: 300;
-			background-color: $colorSienna;
-			text-align: center;
-			a{
-				text-decoration: none;
-				color: white;
-/* 				padding-left: 0.1em; 	 */
-				border: 1px solid white;	
-				padding-left: 0.3em;
-				padding-right: 0.3em;
-				padding-bottom: 0.1em;
-				margin-left: 0.2em;
-			}
-/* 			text-indent: 0%; */
-/* 			white-space: nowrap; */
-/* 			overflow: visible; */
-		}
+section{
+	margin: 3em 2em 3em 2em;
 	header{
-		font-size: 2.1em;
-		text-align: center;
-		height:1.3em;
-		
-		a{
-			logo{
-		/* 		margin-left: 100% - (2 * $leftColumnWith); */
-				float: left;
-		/* 		margin-top: -1.1em;  */
-		    background: url(../img/LogopedieVos.png);
-		    display: block;
-		    background-repeat: no-repeat;
-		    height: 131px;
-		    width: 81px;
-			}
+		font-size: 1.7em;
+		font-weight: 700;
+	}
+	@media only screen AND (max-width: $sizeSmartPhone) {
+		margin: 1em;
+	}	
+}
+
+#mobileonly{
+	display: none;
+	margin:0em;
+}
+
+#logo{
+	text-align: center;
+}
+
+#navigation{
+	text-align: center;
+}
+
+#info{}
+
+#contact{}
+
+#waar{
+	margin:0em;
+	header{
+		margin-left: 1.2em;	
+		margin-right: 1.2em;
+		@media only screen AND (max-width: $sizeSmartPhone) {
+			margin-left: 0.6em;	
+			margin-right: 0.6em;
 		}	
 	}
-	
-	article{
-		padding: 0em;
+	ul{
+		margin-left: 2em;	
+		margin-right: 2em;
+		@media only screen AND (max-width: $sizeSmartPhone) {
+			margin-left: 1em;	
+			margin-right: 1em;
+		}	
 	}
-	footer{
-		height: 22em;
-		
-		img{
-			padding-left: 0.5em;
-			padding-right: 0.5em;
-			width: 100%;
-			margin-top: 0em;
-		}
-		
-	  section {
-			width: 100%;	
-		}
-	}
-	
-	.leftcolumn{
-		width: 100%;
-	}
-	
-	.rightcolumn{
-		width: 100%;
-	}
-	
+}
+
+#links{}
+
+@media only screen and (max-width: $sizeSmartPhone) {
+	#mobileonly{
+		height: 1.7em;
+		display: block;
+		font-size: 1.0em;
+		font-weight: 300;
+		background-color: $colorSienna;
+		text-align: center;
+
+		a{
+			text-decoration: none;
+			color: white;
+			border: 1px solid white;	
+			padding-left: 0.3em;
+			padding-right: 0.3em;
+			padding-bottom: 0.1em;
+			margin-left: 0.2em;
+	  }
+  }
 } 
 
-/* 401px to 696px */
-@media  only screen and (min-width:25.0625em) AND (max-width:43.5em) { //  696 / 16
-	body{
-		font-size: 1em;
-	}
-	header{
-		font-size: 3.3em;
-		height:1.3em;
-/* 		text-align: left; */
-	}
-	article{
-/* 		padding-top: 1em; */
-		padding-left: 9em;
-		padding-right: 0em;
-	}
-	footer{
-		height: 27em;
-		
-		img{				
-	    display: block;
-	    margin-left: auto;
-	    margin-right: auto;
-	    margin-top: 0em;
-	    float: none;
-		}
-	
-		section {
-			width: 100%;
-		}
-	}
-	
-	.leftcolumn{
-		width: 100%;
-	}
-	
-	.rightcolumn{
-		width: 100%;
-	}
-}
-
-@media only screen and (min-width:47em){
-	article{
-		height: 19em;
-	}
-	
-}
