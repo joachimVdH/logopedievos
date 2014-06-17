@@ -13,7 +13,7 @@
 	  <meta name="Copyright" content="Copyright Joachim Van der Hoeven 2014. All Rights Reserved." />
 
 	  <meta name="google-site-verification" content="uNQITMtE0nRZKVo3gHha1rHRMvu6jUN8gcq0pLUSVkw" />
-		
+		<link rel="icon" type="image/png" href="http://logopedievos.be/favicon.png">
 		
 		<style>
 			@font-face {
@@ -22,12 +22,13 @@
 				font-weight: normal; font-style: normal;
 			}
 		</style>
-	  <link rel="stylesheet" href="css/lv.css" />
 	  <script>	document.createElement( "picture" );</script>
-		<script src="js/picturefill.min.js" async></script>
+	  
+	  <link rel="stylesheet" href="css/lv.css" />
+		<script src="js/lv.min.js" async></script>
 			
 	</head>
-	<body>
+	<body><span id="top" />
 		<section id="mobileonly">
 			<a href="tel:+32498701211" itemprop="telephone">bel me</a>
 			<a href="https://www.google.be/maps?q=Hogerheide+26+2860+Sint+-+Katelijne+-+Waver" target="_blank" >open maps</a>
@@ -38,9 +39,16 @@
 { coded = "YG3LLJ3DfYBfqf@nfGjZJB.E3";key = "jok2xuGrKswMEZRnF31JTBDCqQfPAN95XdYcHm6SVWUtzpO8ybaLh4e7iIlv0g";shift=coded.length;link=""; for (i=0; i<coded.length; i++) {if (key.indexOf(coded.charAt(i))==-1) {ltr = coded.charAt(i);link += (ltr);} else {ltr = (key.indexOf(coded.charAt(i))-shift+key.length) % key.length;link += (key.charAt(ltr))}} document.write("<a href='mailto:"+link+"'>email me</a>")}
 //-->
 </script><noscript>Javascript is nodig om te mailen.</noscript>
-	</section>
+		</section>
+			
+		<section id="navigation">
+			<header>
+				<a href="#" id="CompanyName">Logopedie Vos</a>
+			</header>
+			<a href="#" id="infoA">Info</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" id="contactA">Contact en ligging</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" id="linksA">Links</a>
+		</section>	
+		
 		<section id="logo">
-			<a href="http://LogopedieVos.be">
 				<picture>
 					<!--[if IE 9]><video style="display: none;"><![endif]-->
 					<!-- <source srcset="img/logo@3x.png" media="(min-width: 1100px)"> -->
@@ -48,16 +56,17 @@
 					<!-- <source srcset="img/logo.png" media="(max-width: 340px)"> -->
 					<source srcset="img/logo@1x.png">
 					<!--[if IE 9]></video><![endif]-->
-					<img srcset="logo@1x.png" alt="Logopedie Vos">
-				</picture>
-			</a>
+					<img srcset="img/logo@1x.png" alt="Logopedie Vos">
+				</picture>		
 		</section>
 			
-		<section id="navigation">
-			<a href="#info">Info</a> - <a href="#contact">Contact</a> - <a href="#waar">Waar</a> - <a href="#links">Links</a>
-		</section>	
-			
 		<section id="info">
+			Wij zijn een groepspraktijk met 3 logopedisten:
+			<ul>
+				<li>Mevr. Steffie Vos</li>
+				<li>Mevr. Kelly Hendrickx</li>
+				<li>Mevr. Anneke Gommers</li>
+			</ul>
 			We behandelen zowel kinderen, adolescenten als volwassenen met volgende problemen:
 			<ul>
 				<li>Leermoeilijkheden en -stoornissen (dyslexie, dysorthografie en dyscalculie).</li>
@@ -87,9 +96,9 @@
 							//--></script><noscript>Sorry, je hebt Javascript nodig om me te mailen. Dit staat momenteel af in je browser.</noscript>
 					</li>
 				</ul>
-		</section>
-		
-		<section id="waar">
+			</section>
+			
+			<section id="waar"> 	
 			<header>
 				Waar
 			</header>
@@ -101,7 +110,7 @@
 					<a href="https://www.google.be/maps?q=Mechelsesteenweg+321+2860+Sint-Katelijne-Waver&hl=en&ll=51.043202,4.498365&spn=0.011508,0.026908&sll=51.046615,4.500961&sspn=0.011871,0.026908&hnear=Mechelsesteenweg+321,+2860+Sint+-+Katelijne+-+Waver&t=m&z=16" target="_blank">Mechelsesteenweg 321 - 2860 Sint-Katelijne-Waver</a>
 				</li>
 			</ul>
-			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5016.701069129844!2d4.500961!3d51.046615!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3e4574a022127%3A0x1d476d15db1243a2!2sHogerheide+26!5e0!3m2!1sen!2sbe!4v1399122032657" width="100%" frameborder="0" style="border:0" marginheight="0" marginwidth="0" ></iframe>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5016.701069129844!2d4.500961!3d51.046615!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3e4574a022127%3A0x1d476d15db1243a2!2sHogerheide+26!5e0!3m2!1sen!2sbe!4v1399122032657" width="100%" frameborder="0" style="border:0" marginheight="0" marginwidth="0" id="gmap" ></iframe>
 		</section>
 		
 		<section id="links">

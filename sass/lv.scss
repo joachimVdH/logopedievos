@@ -35,7 +35,7 @@ html{
 
 body{
   font-family: $fontBody;
-  background-color: $colorBackground;
+	background-color: lighten($colorBackground, 15%);
 	font-size: 1.5em;  
 	line-height: 150%;
 	
@@ -56,6 +56,9 @@ li{
 a{
 	text-decoration: none;
 }
+a:hover {
+	text-decoration: underline;
+}
 
 iframe{
 	height: 400px;
@@ -65,13 +68,12 @@ iframe{
 }
 
 section{
-	margin: 3em 2em 3em 2em;
 	header{
 		font-size: 1.7em;
 		font-weight: 700;
 	}
 	@media only screen AND (max-width: $sizeSmartPhone) {
-		margin: 1em;
+		margin: 0em;
 	}	
 }
 
@@ -82,37 +84,123 @@ section{
 
 #logo{
 	text-align: center;
+	padding: 3em 2em 3em 2em;
 }
 
 #navigation{
+	margin-top: 0.5em;
 	text-align: center;
+	// margin: 3em 2em 3em 2em;
+	background: $colorBackground;
+	
+	> a{
+		color: blue;
+		text-decoration: none;
+	}
+	
+	> a:hover{
+		color: blue;
+		text-decoration: underline;
+	}
+
+	> header{
+		padding:0.4em;
+		font-size: 4em;
+		font-weight: 900;
+		color: white;
+		$default-text-shadow-color: #4C4C4C ;
+		$default-text-shadow-blur: 2px;
+		@include single-text-shadow;
+		
+		> a{
+			color: white;
+			text-decoration: none;
+		}
+		
+		> a:hover{
+			color: white;
+			text-decoration: none;
+		}
+	
+		@media only screen AND (max-width: 41.25em) { //AND (max-width: $sizeSmartPhone) {
+			padding: 0.2em;
+			font-size: 2em;
+			font-weight: 700;
+		}		
+		// @media only screen AND (min-width: $sizeSmartPhone +1) AND (max-width: 41.25em) {
+		// 	padding: 0.2em;
+		// 	font-size: 2em;
+		// 	font-weight: 700;
+		// }	
+	}
 }
 
-#info{}
+#info{
+	@media only screen AND (min-width: $sizeSmartPhone +1) {
+		padding: 3em 2em 2em 2em;
+	}
+	@media only screen AND (max-width: $sizeSmartPhone) {
+		margin-top: 1em;
+		margin-left: 0.6em;	
+		margin-right: 0.6em;
+	}	
+	display: none;
+}
 
-#contact{}
+#contact{
+	margin: 3em 2em 2em 2em;
+	display: none;
+	@media only screen AND (max-width: $sizeSmartPhone) {
+		margin-top: 1em;
+		margin-left: 0.6em;	
+		margin-right: 0.6em;
+	}	
+}
 
 #waar{
+	display: none;
+	padding-top: 1em;
 	margin:0em;
+	
+	@media only screen AND (max-width: $sizeSmartPhone) {
+		margin-left: 0.6em;	
+		margin-right: 0.6em;
+	}	
+
 	header{
-		margin-left: 1.2em;	
-		margin-right: 1.2em;
-		@media only screen AND (max-width: $sizeSmartPhone) {
-			margin-left: 0.6em;	
-			margin-right: 0.6em;
-		}	
+		@media only screen AND (min-width: $sizeSmartPhone +1) {
+			margin-left: 1.2em;	
+			margin-right: 1.2em;
+		}
+		// @media only screen AND (max-width: $sizeSmartPhone) {
+		// 	margin-left: 0.6em;	
+		// 	margin-right: 0.6em;
+		// }	
 	}
 	ul{
-		margin-left: 2em;	
-		margin-right: 2em;
-		@media only screen AND (max-width: $sizeSmartPhone) {
-			margin-left: 1em;	
-			margin-right: 1em;
-		}	
+		@media only screen AND (min-width: $sizeSmartPhone +1) {
+			margin-left: 2em;	
+			margin-right: 2em;
+		}
+		// @media only screen AND (max-width: $sizeSmartPhone) {
+		// 	margin-left: 1em;	
+		// 	margin-right: 1em;
+		// }	
 	}
 }
 
-#links{}
+#links{
+	display: none;
+	@media only screen AND (min-width: $sizeSmartPhone +1) {
+		margin: 3em 2em 3em 2em;
+	}
+	
+	@media only screen AND (max-width: $sizeSmartPhone) {
+		margin-top: 1em;
+		margin-left: 0.6em;	
+		margin-right: 0.6em;
+	}	
+}
 
 @media only screen and (max-width: $sizeSmartPhone) {
 	#mobileonly{
